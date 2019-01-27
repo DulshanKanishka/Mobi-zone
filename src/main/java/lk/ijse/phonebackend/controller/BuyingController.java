@@ -13,30 +13,7 @@ import java.util.List;
 @CrossOrigin
 @RequestMapping("api/v1/buying")
 public class BuyingController {
-//    @Autowired
-//    private BuyingService buyingService;
 
-//    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-//    public List<BuyingDto> getAllBuying(){
-//        return buyingService.getAllBuingService();
-//    }
-//
-//    @GetMapping(value = "/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
-//    public BuyingDto findBuying(@PathVariable("id") String id){
-//        // System.out.println("Id is  :  "+id);
-//        return buyingService.findBuingService(id);
-//    }
-//
-//    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
-//    public boolean saveBuying(@RequestBody BuyingDto buyingDto){
-//        //  System.out.println(" id:  "+signUpDto.getId()+" name:  "+signUpDto.getName()+" price:  "+signUpDto.getPrice()+" desc:  "+signUpDto.getDescription()+" reserve type:  "+signUpDto.getReserveType()+" type:  "+signUpDto.getType()
-//        // );
-//        return buyingService.saveBuyingService(buyingDto);
-//    }
-//    @GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public long getTotalBuying(){
-//        return buyingService.getTotalBuying();
-//    }
 
     @Autowired
     private BuyingService buyingService;

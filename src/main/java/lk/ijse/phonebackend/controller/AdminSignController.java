@@ -13,31 +13,6 @@ import java.util.List;
 @RequestMapping("api/v1/adminsign")
 public class AdminSignController {
 
-//    @Autowired
-//    private AdminSignService adminSignService;
-
-//    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-//    public List<AdminSignDto> getAllAdminSign(){
-//        return adminSignService.getAllAdminSignService();
-//    }
-//
-//    @GetMapping(value = "/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
-//    public AdminSignDto findAdminSign(@PathVariable("id") String id){
-//        // System.out.println("Id is  :  "+id);
-//        return adminSignService.findAdminSignService(id);
-//    }
-//
-//    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
-//    public boolean saveAdminSign(@RequestBody AdminSignDto adminSignDto){
-//        //  System.out.println(" id:  "+signUpDto.getId()+" name:  "+signUpDto.getName()+" price:  "+signUpDto.getPrice()+" desc:  "+signUpDto.getDescription()+" reserve type:  "+signUpDto.getReserveType()+" type:  "+signUpDto.getType()
-//        // );
-//        return adminSignService.saveAdminSignService(adminSignDto);
-//    }
-//    @GetMapping(value = "/count", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public long getTotalAdminSign(){
-//        return adminSignService.getTotalAdminSign();
-//    }
-
     @Autowired
     private AdminSignService adminSignService;
 
