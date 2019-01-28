@@ -83,8 +83,10 @@ public class AdminSignServiceImpl implements AdminSignService {
         List<AdminSign> allHomeList = adminSignRepository.findAll();
         List<AdminSignDto> dtos = new ArrayList<>();
         allHomeList.forEach(adminSignDto -> dtos.add(new AdminSignDto(adminSignDto.getAdminemail(),adminSignDto.getAdminPassword())));
-        System.out.println("fgdfagdfgadfgafsdgsfdafsdgfgsdahgsdfa");
         return dtos;
     }
+    
+    
+    
 
 }
