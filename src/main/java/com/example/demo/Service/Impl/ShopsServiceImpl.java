@@ -23,13 +23,13 @@ public class ShopsServiceImpl implements ShopsService {
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public void saveShops(ShopsDto shopsDto) {
-    	shopsRepository.save(new Shops(shopsDto.getPname(),shopsDto.getPlace(),shopsDto.getSname()));
+    	shopsRepository.save(new Shops(shopsDto.getSid(),shopsDto.getPname(),shopsDto.getPlace(),shopsDto.getSname()));
     }
 
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public void updateShops(ShopsDto shopsDto) {
-    	shopsRepository.save(new Shops(shopsDto.getPname(),shopsDto.getPlace(),shopsDto.getSname()));
+    	shopsRepository.save(new Shops(shopsDto.getSid(),shopsDto.getPname(),shopsDto.getPlace(),shopsDto.getSname()));
     }
 
     @Override
@@ -40,8 +40,8 @@ public class ShopsServiceImpl implements ShopsService {
     @Override
     public ShopsDto findShops(String name) {
         Shops shopsDto= shopsRepository.findById(name).get();
-        System.out.println(shopsDto.getPname());
-        return new ShopsDto(shopsDto.getPname(),shopsDto.getPlace(),shopsDto.getSname());
+        System.out.println(shopsDto.getSid());
+        return new ShopsDto(shopsDto.getSid(),shopsDto.getPname(),shopsDto.getPlace(),shopsDto.getSname());
 
     }
 
@@ -49,7 +49,7 @@ public class ShopsServiceImpl implements ShopsService {
     public List<ShopsDto> findAllShops() {
         List<Shops> allshops = shopsRepository.findAll();
         List<ShopsDto> dtos = new ArrayList<>();
-        allshops.forEach(shopsDto -> dtos.add(new ShopsDto(shopsDto.getPname(),shopsDto.getPlace(),shopsDto.getSname())));
+        allshops.forEach(shopsDto -> dtos.add(new ShopsDto(shopsDto.getSid(),shopsDto.getPname(),shopsDto.getPlace(),shopsDto.getSname())));
         return dtos;
     }
 

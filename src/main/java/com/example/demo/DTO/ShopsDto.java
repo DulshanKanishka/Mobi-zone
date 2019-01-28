@@ -1,10 +1,13 @@
 package com.example.demo.DTO;
 
 public class ShopsDto {
+	private String sid;
 	private String pname;
 	private String sname;
 	private String place;
-	public ShopsDto(String pname, String sname, String place) {
+	
+	public ShopsDto(String sid, String pname, String sname, String place) {
+		this.sid = sid;
 		this.pname = pname;
 		this.sname = sname;
 		this.place = place;
@@ -29,9 +32,16 @@ public class ShopsDto {
 	public void setPlace(String place) {
 		this.place = place;
 	}
+	
+	public String getSid() {
+		return sid;
+	}
+	public void setSid(String sid) {
+		this.sid = sid;
+	}
 	@Override
 	public String toString() {
-		return "ShopsDTO [pname=" + pname + ", sname=" + sname + ", place=" + place + "]";
+		return "ShopsDto [sid=" + sid + ", pname=" + pname + ", sname=" + sname + ", place=" + place + "]";
 	}
 	
 }
